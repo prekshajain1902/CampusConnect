@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+}
+.navbar-brand{
+    font-weight: bold;
+    color: black !important;
+    font-size: 1.5rem;
+}
+
+.right input {
+    padding: 5px;
+    width: 200px;
+}
+
+.left img {
+    width: 150px;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 550px; /* Increased height */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slide Styling */
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 550px; /* Ensures consistent height */
+    object-fit: cover; /* Ensures image covers full area */
+    border-radius: 10px;
+}
+
+/* Navigation Dots */
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fade Animation */
+.fade {
+    animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        height: 400px; /* Reduce height for mobile */
+    }
+    
+    .slide img {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slideshow-container {
+        height: 300px; /* Further reduce height for small screens */
+    }
+
+    .slide img {
+        height: 300px;
+    }
+}
+
+.club-container, .event-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.club-card, .event-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}
+
+.club-card img, .event-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
